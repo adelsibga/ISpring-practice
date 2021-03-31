@@ -15,7 +15,7 @@ class ImageProvider implements ImageProviderInterface
 	public function getPhotosUrls(string $theme): array // получаем 5 случайных фото по теме 
 	{
 		$this->getUrls($theme);
-		for ($i = 0; $i <= 5; ++$i)
+		for ($i = 0; $i < 5; ++$i)
 		{ 
 			$length = count($this->urls);
 			$index = rand(0, $length - 1);
