@@ -34,6 +34,25 @@
     <h3>А теперь можете посмотреть больше моих фото и подписаться</h3>
     <a target="_blank" href="https://www.instagram.com/padre_fedor/?hl=ru">@padre_fedor</a>
     <p>Alt+3</p>
-	{{test}}
+	<div>
+	  <p>текст1</p>
+	  {% for photo in firstPhotos %}
+         <img src="{{ photo }}" alt="photo_not_found">
+      {% endfor %}
+	</div>
+
+	<div>
+	  <p>текст2</p>
+	  {% for photo in secondPhotos %}
+         <img src="{{ photo }}" alt="photo_not_found">
+      {% endfor %}
+	</div>
+
+	<div>
+	  <p>текст3</p>
+	  {% for photo in thirdPhotos %}
+         <img src="{{ photo }}" alt="photo_not_found">
+      {% endfor %}
+	</div>
 </div>
 {% endblock %}

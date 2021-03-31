@@ -13,11 +13,13 @@ class PageController extends AbstractController
   public function page(): Response
   {
 	  $images = new ImageProvider();
-	  $images->getUrls('cars');
-
-	//  $firstTheme = $images->getPhotosUrls('Баскетбол');
+	  $firstTheme = $images->getPhotosUrls('Баскетбол');
+	  $secondPhotos = $images->getPhotosUrls('Математика');
+	  $thirdPhotos = $images->getPhotosUrls('Готовка');
       return $this->render('/about_me/index.html.twig', [
-		  'test' => debug_zval_dump($images)
+		  'firstPhotos' => $firstTheme,
+		  'secondPhotos' => $secondPhotos,
+		  'thirdPhotos' => $thirdPhotos,
 	  ]);
   }
 }
