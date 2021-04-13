@@ -16,7 +16,7 @@ class PageController extends AbstractController
 	  $firstTheme = $images->getPhotosUrls('АСБ_мужской_баскетбол');
 	  $secondPhotos = $images->getPhotosUrls('Математика');
 	  $thirdPhotos = $images->getPhotosUrls('Готовка');
-          return $this->render('/about_me/index.html.twig', [
+		  return $this->render('/about_me/index.html.twig', [
 		  'firstPhotos' => $firstTheme,
 		  'secondPhotos' => $secondPhotos,
 		  'thirdPhotos' => $thirdPhotos,
