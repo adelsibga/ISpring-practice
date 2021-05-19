@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use App\Module\ImageProvider;
+use App\Modules\AboutMe\Infrastructure\ImageProvider;
 
 class PageController extends AbstractController
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\App;
+namespace App\Modules\AboutMe\App;
 
 use App\Modules\AboutMe\Infrastructure\HobbiesRepository;
 use App\Modules\AboutMe\Model\Hobbie;
@@ -26,7 +26,7 @@ class HobbieService //создает массив адекватных данн�
     public function addHobbie(string $title): void
     {
         $imageProvider = new ImageProvider();
-        $photos = $imageProvider->getPhotos($title);
+        $photos = $imageProvider->getPhotosUrls($title);
         $hobbie = new Hobbie($title, $photos);
         $this->hobbies[] = $hobbie;
     }

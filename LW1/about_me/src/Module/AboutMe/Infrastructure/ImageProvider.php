@@ -3,6 +3,7 @@
 namespace App\Modules\AboutMe\Infrastructure;
 
 use IvanUskov\ImageSpider\ImageSpider;
+use App\Module\ImageProviderInterface;
 
 class ImageProvider implements ImageProviderInterface
 {

@@ -4,10 +4,8 @@ namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use App\Modules\App\HobbieService;
+use App\Modules\AboutMe\App\HobbieService;
 use App\View\AboutMe\AboutMePageView;
-use App\Module\ImageProviderInterface;
-use App\Modules\AboutMe\Infrastructure\ImageProvider;
 
 class AboutMeController extends AbstractController
 {
