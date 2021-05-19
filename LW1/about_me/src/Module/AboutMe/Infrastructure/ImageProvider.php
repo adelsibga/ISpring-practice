@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Module;
+namespace App\Modules\AboutMe\Infrastructure;
 
 use IvanUskov\ImageSpider\ImageSpider;
 
