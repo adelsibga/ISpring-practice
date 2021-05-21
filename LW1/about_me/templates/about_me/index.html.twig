@@ -38,51 +38,23 @@
     <a target="_blank" href="https://vk.com/s1bga">Адель Сибгатуллин</a>
     <h2>А теперь можете посмотреть больше моих фото и подписаться</h2>
     <a target="_blank" href="https://www.instagram.com/padre_fedor/?hl=ru">@padre_fedor</a>
-
-{#    <div>#}
-{#        {% for hobbie in hobbies %}#}
-{#            <h2>{{ hobbie.title }}</h2>#}
-{#            <div class="block-for-slider" id="block-for-slider">#}
-{#                <div id="viewport">#}
-{#                    <ul id="slidewrapper">#}
-{#                        {% for photo in hobbie.photos %}#}
-{#                            <li class="slide">#}
-{#                                <img src="{{ photo }}" alt="NotFound" class="slide-img">#}
-{#                            </li>#}
-{#                        {% endfor %}#}
-{#                    </ul>#}
-
-{#                    <div id="prev-next-btns">#}
-{#                        <div id="prev-btn"></div>#}
-{#                        <div id="next-btn"></div>#}
-{#                    </div>#}
-
-{#                    <ul id="nav-btns">#}
-{#                        {% for photo in hobbie.photos %}#}
-{#                            <li class="slide-nav-btn"></li>#}
-{#                        {% endfor %}#}
-{#                    </ul>#}
-{#                </div>#}
-{#            </div>#}
-{#        {% endfor %}#}
-{#    </div>#}
     <div>
         {% for hobby in hobbies %}
-            	<p class="title">{{ hobby.title }} </p>
-            	<div class="ant-carousel" id="{{ hobby.title }}">
-               		<div class="ant-carousel-hider">
-                    	<ul class="ant-carousel-list">
-                        	{% for image in hobby.photos %}
-                            	<li class="ant-carousel-element">
-                                	<img class="ant-img" src="{{ image }}" alt="0">
-                            	</li>
-                        	{% endfor %}
-                    	</ul>
-                	</div>
-                	<div class="ant-carousel-arrow-left"></div>
-                	<div class="ant-carousel-arrow-right"></div>
-                	<div class="ant-carousel-dots"></div>
-            	</div>
+            <p class="title">{{ hobby.title }} </p>
+            <div class="ant-carousel" id="{{ hobby.title }}">
+                <div class="ant-carousel-hider">
+                    <ul class="ant-carousel-list">
+                        {% for image in hobby.photos %}
+                            <li class="ant-carousel-element">
+                                <img class="ant-img" src="{{ image }}" alt="0">
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="ant-carousel-arrow-left"></div>
+                <div class="ant-carousel-arrow-right"></div>
+                <div class="ant-carousel-dots"></div>
+            </div>
         {% endfor %}
     </div>
     {{ encore_entry_script_tags('app') }}
