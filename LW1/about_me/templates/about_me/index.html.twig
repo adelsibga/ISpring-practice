@@ -3,8 +3,8 @@
 {% block title %} Page about me {% endblock %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
-    a{% endblock %}
+    {{ encore_entry_link_tags('app') }}
+{% endblock %}
 
 {% block scripts %}{# <script type="text/javascript" src="{{ asset('build/Slider.js') }}"></script> #} {% endblock %}
 

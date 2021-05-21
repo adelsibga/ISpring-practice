@@ -1,4 +1,4 @@
-import 'about_me.css';
+import './slider.css';
 import $ from 'jquery';
 
 
