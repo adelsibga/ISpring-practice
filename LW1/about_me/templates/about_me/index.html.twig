@@ -68,23 +68,21 @@
 {#    </div>#}
     <div>
         {% for hobby in hobbies %}
-        {% for theme in hobby.photos %}
-            <p class="title">{{ theme}} </p>
-            <div class="ant-carousel" id="{{ theme }}">
-                <div class="ant-carousel-hider">
-                    <ul class="ant-carousel-list">
-                        {% for image in theme %}
-                            <li class="ant-carousel-element">
-                                <img class="ant-img" src="{{ image }}" alt="0">
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class="ant-carousel-arrow-left"></div>
-                <div class="ant-carousel-arrow-right"></div>
-                <div class="ant-carousel-dots"></div>
-            </div>
-        {% endfor %}
+            	<p class="title">{{ hobby.title }} </p>
+            	<div class="ant-carousel" id="{{ hobby.title }}">
+               		<div class="ant-carousel-hider">
+                    	<ul class="ant-carousel-list">
+                        	{% for image in hobby.photos %}
+                            	<li class="ant-carousel-element">
+                                	<img class="ant-img" src="{{ image }}" alt="0">
+                            	</li>
+                        	{% endfor %}
+                    	</ul>
+                	</div>
+                	<div class="ant-carousel-arrow-left"></div>
+                	<div class="ant-carousel-arrow-right"></div>
+                	<div class="ant-carousel-dots"></div>
+            	</div>
         {% endfor %}
     </div>
     {{ encore_entry_script_tags('app') }}
