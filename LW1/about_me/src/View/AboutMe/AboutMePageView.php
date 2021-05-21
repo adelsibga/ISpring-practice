@@ -2,7 +2,7 @@
 
 namespace App\View\AboutMe;
 
-use App\Modules\App\HobbieService;
+use App\Modules\AboutMe\App\HobbieService;
 
 class AboutMePageView
 {

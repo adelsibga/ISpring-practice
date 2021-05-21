@@ -6,7 +6,12 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.css';
+// import('./styles/app.css')
+
+require('./modules/aboutme/about_me.js');
+
+require('./modules/aboutme/components/slider/slider.css');
+require('./modules/aboutme/components/slider/slider.js');
 
 // start the Stimulus application
-import './bootstrap';
+// import './bootstrap';

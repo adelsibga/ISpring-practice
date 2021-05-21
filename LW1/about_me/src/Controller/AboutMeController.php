@@ -14,6 +14,6 @@ class AboutMeController extends AbstractController
         $hobbies = new HobbieService();             //складывает в наборы
         $view = new AboutMePageView($hobbies);      //(Привязка к View)'
 
-        return $this->render('base.html.twig', $view->getOptions());
+        return $this->render('about_me\index.html.twig', $view->getOptions());
     }
 }
