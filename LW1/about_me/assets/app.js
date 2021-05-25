@@ -10,8 +10,5 @@
 
 require('./modules/aboutme/about_me.js');
 
-require('./modules/aboutme/components/slider/slider.css');
-require('./modules/aboutme/components/slider/slider.js');
-
 // start the Stimulus application
 // import './bootstrap';
