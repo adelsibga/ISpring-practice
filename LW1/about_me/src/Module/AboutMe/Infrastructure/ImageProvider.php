@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Modules\AboutMe\Infrastructure;
+namespace App\Module\AboutMe\Infrastructure;
 
 use IvanUskov\ImageSpider\ImageSpider;
-use App\Module\ImageProviderInterface;
+use App\Module\AboutMe\App\ImageProviderInterface;
 
 class ImageProvider implements ImageProviderInterface
 {

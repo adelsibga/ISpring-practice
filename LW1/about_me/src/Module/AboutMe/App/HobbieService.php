@@ -1,18 +1,25 @@
 <?php
 
-namespace App\Modules\AboutMe\App;
+namespace App\Module\AboutMe\App;
 
-use App\Modules\AboutMe\Infrastructure\HobbiesRepository;
-use App\Modules\AboutMe\Model\Hobbie;
-use App\Modules\AboutMe\Infrastructure\ImageProvider;
+use App\Module\AboutMe\App\ConstHobbieConfigurationInterface;
+use App\Module\AboutMe\Model\Hobbie;
+use App\Module\AboutMe\App\ImageProviderInterface;
+
 
 class HobbieService //создает массив адекватных данных из картинок и названий
 {
+    private ConstHobbieConfigurationInterface $hobbieConfiguration;
+    private ImageProviderInterface $imageProvider;
     private array $hobbies = [];  //var
 
-    public function __construct()
+
+    public function __construct(ConstHobbieConfigurationInterface $hobbieConfiguration, ImageProviderInterface $imageProvider)
     {
-        foreach (HobbiesRepository::getHobbiesMap() as $value) //получить список хобби-заголовков
+        $this->hobbieConfiguration = $hobbieConfiguration;
+        $this->imageProvider = $imageProvider;
+
+        foreach ($this->hobbieConfiguration::getHobbiesMap() as $value) //получить список хобби-заголовков
         {
             $this->addHobbie($value);
         }
@@ -25,8 +32,7 @@ class HobbieService //создает массив адекватных данн�
 
     public function addHobbie(string $title): void
     {
-        $imageProvider = new ImageProvider();
-        $photos = $imageProvider->getPhotosUrls($title);
+        $photos = $this->imageProvider->getPhotosUrls($title);
         $hobbie = new Hobbie($title, $photos);
         $this->hobbies[] = $hobbie;
     }

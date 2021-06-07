@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\AboutMe\Model;
+namespace App\Module\AboutMe\Model;
 
 class Hobbie
 {

@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Modules\AboutMe\Infrastructure;
+namespace App\Module\AboutMe\Infrastructure;
 
-class HobbiesRepository
+use App\Module\AboutMe\App\ConstHobbieConfigurationInterface;
+
+class ConstHobbieConfiguration implements ConstHobbieConfigurationInterface
 {
     public static function getHobbiesMap(): array //хранит массив заголовков
     {

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Modules\App;
+namespace App\Module\AboutMe\App;
 
 interface ImageProviderInterface
 {
-    public function getUrls(string $keywords);
+    public function getPhotosUrls(string $theme): array;
 }

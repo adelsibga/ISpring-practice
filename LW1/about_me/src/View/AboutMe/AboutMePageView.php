@@ -2,19 +2,17 @@
 
 namespace App\View\AboutMe;
 
-use App\Modules\AboutMe\App\HobbieService;
-
 class AboutMePageView
 {
     private array $options = [];
 
-    public function __construct(HobbieService $hobbies) //инициализация
+    public function __construct(array $hobbies) //инициализация
     {
         $result = [
             'hobbies' => [],
         ];
 
-        foreach ($hobbies->getHobbies() as $value)  //создает нормальные наборы
+        foreach ($hobbies as $value)  //создает нормальные наборы
         {
             $result['hobbies'][] = [
                 'title' => $value->getTitle(),
